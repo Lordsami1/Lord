@@ -17,7 +17,7 @@ local Methods = io.open("./luatele.lua","r")
 if Methods then
 URL.tdlua_CallBack()
 end
-SshId = io.popen("echo $SSH_CLIENT | awk ' print $1}'"):read('a')
+SshId = io.popen("echo $SSH_CLIENT  awk '{ print $1}'"):read('*a')
 luatele = require 'luatele'
 local FileInformation = io.open("./Information.lua","r")
 if not FileInformation then
